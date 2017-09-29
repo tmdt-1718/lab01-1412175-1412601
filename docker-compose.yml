@@ -2,17 +2,22 @@ version: '3'
 services:
   webapp:
     build: .
-    volumes: 
+    volumes:
     - .:/webapp
     ports:
     - 3000:3000
+    container_name: webapp
     command: sh /webapp/scripts/startup.sh
     links:
     - db
+    env_file: .env
+    stdin_open: true
+    tty: true
+    environment:
+      - ALLOW_OVERRIDE=true
   db:
     image: postgres
     ports:
     - 5432:5432
-    environment:
-    - POSTGRES_USER=postgres
-    - POSTGRES_PASSWORD=123456
+    container_name: db
+    env_file: .env
