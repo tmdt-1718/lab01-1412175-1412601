@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   delete '/session/logout', to: 'session#destroy', as: :logout
 
   resources :album, only: [:index, :show]
-  resources :blog, only: [:index, :show]
+  resources :blog, only: [:index, :show, :create, :new]
   root 'home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

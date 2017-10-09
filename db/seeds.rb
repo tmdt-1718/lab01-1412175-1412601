@@ -11,7 +11,7 @@ Image.delete_all
 Album.delete_all
 
 (1..10).each do |user_num|
-  user = User.create!(name: Faker::Name.name, email: "baotuan0.0@gmail.com", password_digest: "123")
+  user = User.create!(name: Faker::Name.name, email: "baotuan0.#{user_num}@gmail.com", password_digest: "123")
 
   (1..10).each do |article_num|
     article = user.articles.create!(title: Faker::Pokemon.name, body: Faker::Lorem.paragraph(10))
