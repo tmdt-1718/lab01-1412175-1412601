@@ -1,11 +1,14 @@
+
+<h1> Albums </h1>
 <ul class="article-list-large">
-  <li>
-    <a href="/album/1">
-      <%= image_tag("sahale-wa.jpg", :alt => "Green Beach") %>
+  <% @albums.each do |album| %>
+    <li>
+    <a href="<%=album_path(album.id)%>" target="_blank">
+      <%= image_tag(album.cover, :alt => "Green Beach") %>
     </a>
 
     <h2>
-      <a href="/album/1">Interesting article title</a>
+      <a href="/album/1"><%=album.title%></a>
     </h2>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu lacus mattis, laoreet diam a, volutpat magna. Donec eleifend laoreet elementum. Nulla dictum lacinia ut sodales libero. Etiam vestibulum ex in leo euismod.</p>
@@ -14,26 +17,8 @@
       <a href="#">Author Name</a>
       &middot; 22nd Aug 2015</span>
 
-    <div>17</div>
+    <div><%=album.total_view%></div>
   </li>
 
-  <li>
-    <a href="/album/2">
-      <!-- <img src="/images/sands-of-life.jpg" alt="Colosseum"/> -->
-      <%= image_tag("sands-of-life.jpg", :alt => "Colosseum") %>
-    </a>
-
-    <h2>
-      <a href="/album/2">Interesting article title</a>
-    </h2>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu lacus mattis, laoreet diam a, volutpat magna. Donec eleifend laoreet elementum. Nulla dictum lacinia ut sodales libero. Etiam vestibulum ex in leo euismod.</p>
-
-    <span>by
-      <a href="#">Author Name</a>
-      &middot; 15th Nov 2014</span>
-
-    <div>32</div>
-  </li>
-
+    <%end%>
 </ul>
