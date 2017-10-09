@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
   </head>
 
-  <body >
+  <body class="container-fluid">
+
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Navbar</a>
@@ -27,25 +28,26 @@
             </a>
           </li>
           <li class="nav-item">
-            <!-- <a class="nav-link" href="#">Album</a> -->
             <%= link_to "Album", album_index_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
+            <%= link_to "Blog", blog_index_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <!-- <a class="nav-link" href="#">About</a> -->
             <%= link_to "About",about_path, class: "nav-link" %>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        <p class="navbar-text navbar-right actions">
+          <a class="navbar-link login" href="#">Log In</a>
+          <a class="btn btn-default action-button" role="button" href="#">Sign Up</a>
+        </p>
       </div>
     </nav>
+
+
     <!-- END -->
-    <div >
+
+    <div class="container">
       <div class="row">
         <div class="col-md-12">
           <%= yield %>
@@ -54,18 +56,23 @@
     </div>
     <hr class="featurette-divider">
 
-    <!-- /END THE FEATURETTES -->
 
     <!-- FOOTER -->
-    <footer>
-      <p class="float-right">
-        <a href="#">Back to top</a>
-      </p>
-      <p>&copy; 2017 Company, Inc. &middot;
-        <a href="#">Privacy</a>
-        &middot;
-        <a href="#">Terms</a>
-      </p>
+    <footer id="myFooter">
+        <div class="container">
+            <ul>
+                <li><a href="#">Company Information</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Terms of service</a></li>
+            </ul>
+        <p class="footer-copyright">© 2016 Copyright Text</p>
+        </div>
+        <div class="footer-social">
+            <a href="#" class="social-icons"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="social-icons"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="social-icons"><i class="fa fa-twitter"></i></a>
+        </div>
     </footer>
 
   </body>

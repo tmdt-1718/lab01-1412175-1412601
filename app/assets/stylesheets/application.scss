@@ -3,3 +3,66 @@
 @import "album";
 @import "home";
 @import "showAlbum";
+@import "blog";
+
+#myFooter {
+  padding-top: 32px;
+  .container {
+    text-align: center;
+  }
+  .footer-copyright {
+    margin-bottom: 35px;
+    text-align: center;
+    color: #777;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 18px;
+  }
+  a {
+    color: #282b2d;
+    font-size: 18px;
+  }
+  li {
+    display: inline-block;
+    margin: 0px 15px;
+    line-height: 2;
+  }
+  .footer-social {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #eee;
+  }
+  .fa {
+    font-size: 36px;
+    margin-right: 15px;
+    margin-left: 20px;
+    background-color: white;
+    color: #d0d0d0;
+    border-radius: 51%;
+    padding: 10px;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    line-height: 43px;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .fa-facebook {
+    &:hover, &:focus {
+      color: #2b55ff;
+    }
+  }
+  .fa-google-plus {
+    &:hover, &:focus {
+      color: red;
+    }
+  }
+  .fa-twitter {
+    &:hover, &:focus {
+      color: #00aced;
+    }
+  }
+}
